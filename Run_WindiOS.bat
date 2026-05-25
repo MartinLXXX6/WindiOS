@@ -1,0 +1,1 @@
+START "" /MAX "%~dp0WindiOS.bat"
