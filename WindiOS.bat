@@ -96,7 +96,7 @@ REM User Interface Functions
 	ECHO                         ^|  21. DIRECTX DIAG. TOOL  ^|  22. EXECUTABLE TOOL   ^| 23. GROUP POLICY EDITOR ^|
 	ECHO                         ^|           24. VOLUME MIXER           ^|          25. FILE EXPLORER           ^|
 	ECHO                         ^|                                                                             ^|
-	ECHO                         ^|----------------------------------SETTINGS----------------------------------^|
+	ECHO                         ^|----------------------------------SETTINGS-----------------------------------^|
 	ECHO                         ^|    A. MOUSE SETTINGS     ^|    C. MANAGE USERS     ^|    D. UNINSTALL APPS    ^|
 	ECHO                         ^| E. SYSTEM CONFIGURATION  ^| F. ADD/REMOVE FEATURES ^|   G. ADVANCED SETTINGS  ^|
 	ECHO                         ^|  H. SCREENSAVER SETTINGS ^|    I. DESKTOP ICONS    ^|   J. KEYBOARD SETTINGS  ^|
@@ -175,10 +175,10 @@ REM Input Functions
 		SET "menuToLoadIndex=4"
 	) ELSE IF /I "%userInput%" EQU "B" (
 		REG.EXE QUERY "HKCU\Software\Microsoft\MobilePC\MobilityCenter" >NUL 2>&1
-		IF %ERRORLEVEL% EQU "0" (
-			CALL :RunSystem32App "MBLCTR.EXE"
-		) ELSE (
+		IF ERRORLEVEL 1 (
 			CALL :RunSystem32App "SNDVOL.EXE"
+		) ELSE (
+			CALL :RunSystem32App "MBLCTR.EXE"
 		)
 	) ELSE IF "%userInput%" EQU "1" (
 		SET "menuToLoadIndex=1"
