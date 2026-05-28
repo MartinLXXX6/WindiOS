@@ -164,7 +164,7 @@ REM Input Functions
 
 :HandleMainMenuInput
 	IF /I "%userInput%" EQU "T" (
-		CALL :RunSystem32App "TASKMGR.EXE"
+		CALL :RunSystem32App "TASKMGR.EXE" "-d"
 	) ELSE IF /I "%userInput%" EQU "C" (
 		CALL :RunSystem32App "CMD.EXE"
 	) ELSE IF /I "%userInput%" EQU "N" (
@@ -247,7 +247,7 @@ REM Input Functions
 	) ELSE IF /I "%userInput%" EQU "12" (
 		CALL :RunSystem32App "CMD.EXE"
 	) ELSE IF /I "%userInput%" EQU "13" (
-		CALL :RunSystem32App "TASKMGR.EXE"
+		CALL :RunSystem32App "TASKMGR.EXE" "-d"
 	) ELSE IF /I "%userInput%" EQU "14" (
 		CALL :RunSystem32App "NOTEPAD.EXE"
 	) ELSE IF /I "%userInput%" EQU "15" (
