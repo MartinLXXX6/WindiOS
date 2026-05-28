@@ -23,5 +23,14 @@ Simply run the batch file located in the WindiOS folder named "Remove_as_Shell.b
 # Possible issues
 If WindiOS is not running and you do not have explorer as shell you need to press CTRL + SHIFT + ESC to open Task Manager. Once there you might want to open back WindiOS. To achieve this, the simplest way is to open explorer temporarily. Firstly locate & press the "Run new Task" Button on Windows 11's Task Manager and type "explorer" or go to "File" > "Run new Task" for Windows 10's Task Manager and type "explorer".
 
+# More about this app
+This app is divided into four different batch files and one INI file.
+
+- WindiOS.bat: The actual app.
+- Run_WindiOS.bat: A one-line batch file that runs the main app in fullscreen mode.
+- Add_as_Shell.bat: A simple batch file to quickly add WindiOS as the startup shell.
+- Remove_as_Shell.bat: A simple batch file to quickly remove WindiOS as the startup shell.
+- PinnedPrograms.ini: A file to persist pinned programs by the user so they are loaded to the main app once the main app is closed and reopened.
+
 # Thanks
 Thanks for trying it out! if you found issues or missing features dont hesitate to contact me via the issues tab or the pull requests tab here on github.
