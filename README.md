@@ -1,6 +1,8 @@
 # Overview
 A custom shell for windows. Aims to reduce distractions, and improve overall system performance. Especially useful in low-end PCs.
 
+TIP: Use CTRL + MOUSE WHEEL UP/DOWN to zoom in/out the window.
+
 IMPORTANT: By adding WindiOS as shell you are replacing the Windows Taskbar, Start Menu, Desktop and so on. Make sure you know what you are doing.
 
 # Intended use
