@@ -1,9 +1,10 @@
 # Overview
 A custom shell for windows. Aims to reduce distractions, and improve overall system performance. Especially useful in low-end PCs.
+<img width="1920" height="581" alt="Image" src="https://github.com/user-attachments/assets/5cad6021-741c-4be8-9277-04cfb23b1372" />
 
 TIP: Use CTRL + MOUSE WHEEL UP/DOWN to zoom in/out the window.
 
-IMPORTANT: By adding WindiOS as shell you are replacing the Windows Taskbar, Start Menu, Desktop and so on. Make sure you know what you are doing.
+WARINING: By adding WindiOS as shell you are replacing the Windows Taskbar, Start Menu, Desktop and so on. Make sure you know what you are doing.
 
 # Intended use
 Set WindiOS as shell so it opens at startup replacing the native windows shell (explorer.exe). Once it starts never close the window. Programs can be pinned in the Programs Menu withing WindiOS. Switch between opened windows with ALT + TAB. Access network settings and change the keyboard language with the CTRL + ALT + DEL menu. Everything else should be managed from within WindiOS.
