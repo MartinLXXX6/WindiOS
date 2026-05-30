@@ -48,6 +48,7 @@ REM User Interface Functions
 	ECHO  ^|N.           NOTEPAD            ^|3.         FILE EXPLORER          ^|   NETWORK: {CTRL ^+ ALT ^+ DEL}  ^|
 	ECHO  ^|M.         MORE [MENU]          ^|4.          HELP [MENU]           ^|  %DATE% ^| %TIME%  ^|
 	ECHO  ^|________________________________^|5.           REFRESH              ^|________________________________^|
+	ECHO                                   ^|6.       QUIT TO DESKTOP          ^|
 	ECHO                                   ^|__________________________________^|
 	ECHO.
 	ECHO                        ^>^>^> USE {CTRL ^+ MOUSE WHEEL} TO ZOOM IN/OUT THE WINDOW ^<^<^<
@@ -188,6 +189,12 @@ REM Input Functions
 		CALL :RunWindowsApp "EXPLORER.EXE" "shell:::{26EE0668-A00A-44D7-9371-BEB064C98683}\5\::{679f85cb-0220-4080-b29b-5540cc05aab6}"
 	) ELSE IF "%userInput%" EQU "4" (
 		SET "menuToLoadIndex=3"
+	) ELSE IF "%userInput%" EQU "6" (
+		SET /P "confirmation=ARE YOU SURE YOU WANT TO QUIT WINDIOS? (Y)(N): "
+		IF /I "!confirmation!" EQU "Y" (
+			CALL :RunWindowsApp "EXPLORER.EXE"
+			EXIT
+		)
 	)
 	SET "userInput=-1"
 	EXIT /B
@@ -268,7 +275,7 @@ REM Input Functions
 		CALL :RunSystem32App "IEXPRESS.EXE"
 	) ELSE IF /I "%userInput%" EQU "23" (
 		%WINDIR%\System32\GPEDIT.MSC >NUL 2>&1 || (
-			CALL :ShowErrorPopup "ERROR:You must be using Windows Pro edition or better to use this app/feature."
+			CALL :ShowErrorPopup "ERROR: You must be using Windows Pro edition or better to use this app/feature."
 		)
 	) ELSE IF /I "%userInput%" EQU "24" (
 		CALL :RunSystem32App "SNDVOL.EXE"
